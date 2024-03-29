@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "target": "es5"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/Login.jsx"
+, "pages/Components/Misc/Error.jsx", "pages/Components/Product Pages/NewProductPage.jsx", "pages/Components/Product Pages/Featured.jsx", "pages/Components/Product Pages/BargainProducts.jsx", "pages/Components/Product Carousel/NewSwiper.jsx", "pages/Components/Product Carousel/Featuredslider.jsx", "pages/Components/Product Carousel/BargainSwiper.jsx", "pages/Components/Main/Footnote.jsx", "pages/Components/Main/Home.jsx", "pages/Components/Main/navbar.jsx", "pages/Components/User Pages/Login.jsx", "pages/layout.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
