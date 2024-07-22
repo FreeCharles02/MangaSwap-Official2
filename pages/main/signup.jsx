@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Link from 'next/link';
 import { Spacer } from '@nextui-org/react';
 import { useRouter } from 'next/router';
-
+var mysql = require('mysql2');
 
 
 const Signup = () => {
