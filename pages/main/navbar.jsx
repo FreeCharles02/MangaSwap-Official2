@@ -69,7 +69,7 @@ const Navbar = () => {
     
       
      
-      <Link href='../main/searchpage'><button className="search-btn" > Search</button></Link>
+      <Link href ={{pathname: "../pages/main/searchpage.jsx", query: {books}}}><button className="search-btn" > Search</button></Link>
       
       </div>
       </>

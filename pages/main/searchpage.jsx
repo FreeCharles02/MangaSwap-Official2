@@ -2,12 +2,12 @@ import React, {useState, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import useMangaSearch from '../useMangaSearch'
 
-const Searchpage = () => {
+const Searchpage = (books, hasMore) => {
 
     return (
       <>
       <h1>
-        Loading...
+       key <books></books>
       </h1>
       </>
     )
