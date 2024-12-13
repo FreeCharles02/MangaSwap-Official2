@@ -2,7 +2,7 @@ import React, {useState, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import useMangaSearch from '../useMangaSearch'
 
-const Searchpage = (books, hasMore) => {
+const Searchpage = () => {
 
     return (
       <>
