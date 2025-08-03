@@ -9,12 +9,6 @@ export default function App({
   { session, ...pageProps},
  }: AppProps) {
 
-  useEffect(() => {
-    axios.get('api/auth/route')
-      .then((response) => {
-      //  console.log(response.data)
-      })
-  },[])
   return (
     <SessionProvider session={session}>
     <Layout>

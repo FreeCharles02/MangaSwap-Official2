@@ -2,9 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 
 
-const listingpage = () => {
-  const [listName] = useState('');
-  const [quality] = useState('');
+const Listingpage = () => {
+  const [ListName, setListName] = useState('');
+  const [Quality, setQuality] = useState('');
 
 const handleSubmit = () => {
   console.log(listName)
