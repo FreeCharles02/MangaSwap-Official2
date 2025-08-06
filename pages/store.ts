@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
+import  mangaReducer from '../pages/manga/mangaSlice'
 
-const store = configureStore({
+export const store = configureStore({
     reducer: {
-        // add reducers
+        manga : mangaReducer
     }
 })
 
 export type RootState = ReturnType<typeof store.getState>
 
 export type AppDispatch = typeof store.dispatch
+

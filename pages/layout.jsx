@@ -2,12 +2,13 @@ import Navbar from './main/navbar'
 import Footer from './main/footnote'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Navbar2 from './other/navbar2'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function Layout({ children }) {
   const {data: session, status} = useSession()
   const userEmail = session?.user?.email
 
-  if (status === "authenticated") {
+ // if (status === "authenticated") {
     return (
       <div>
           <Navbar />
@@ -15,9 +16,7 @@ export default function Layout({ children }) {
           <Footer />
         </div>
     )
-  }
-
-else {  
+    /* else {  
 
 return (
   <div>
@@ -27,4 +26,6 @@ return (
   </div>
   )
  }
-};
+}; 
+ } */
+  }
