@@ -3,7 +3,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {FreeMode} from "swiper";
 import { Navigation, Pagination, A11y} from 'swiper';
 import Link from 'next/link';
-
+import styles from './barswiper.module.css'
 import "swiper/css";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,7 +12,7 @@ import 'swiper/css/scrollbar';
 const BarSwiper = () => {
     const imageStyle = { width: 200, height: 300 }
     return (
-
+         <div className={styles.primary}>
             <Swiper 
                  modules={[Navigation, Pagination, A11y, FreeMode]}
                  spaceBetween={-600}
@@ -24,7 +24,7 @@ const BarSwiper = () => {
                  onSwiper={(swiper) => console.log(swiper)}
                  >
                    
-                     <SwiperSlide> 
+                     <SwiperSlide className='swiperslide'> 
                         <Link href='../product-pages/productlisting'>
                         <img style={imageStyle} src='https://i.imgur.com/o4lXKjM.jpg' 
                         href='../product-pages/newproductpage'/> 
@@ -58,7 +58,7 @@ const BarSwiper = () => {
                      </SwiperSlide>
                      
                  </Swiper>
-      
+         </div>
     );  
 };
 

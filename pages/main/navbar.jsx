@@ -48,7 +48,7 @@ const Navbar = () => {
       
       
       
-      <ul>
+      <ul className="row d-flex">
         <li>
        <Link href='../user-pages/community' className="ul">Community</Link>
        </li>
