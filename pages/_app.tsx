@@ -6,6 +6,7 @@ import type { AppProps } from "next/app"
 import { Provider } from 'react-redux'
 import { useEffect } from 'react'
 import axios from 'axios'
+import 'tailwindcss/index.css'
 export default function App({ 
   Component, pageProps:
   { session, ...pageProps},

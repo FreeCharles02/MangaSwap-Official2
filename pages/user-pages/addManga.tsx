@@ -3,14 +3,15 @@ import styles  from './addManga.module.css'
 import { Dispatch } from 'redux'
 import { store } from '../store'
 import { addCondition, addDesc, addName, addPrice, saveManga, getCurrentManga, addImage } from '../manga/mangaSlice'
-import { StyledPre } from '@nextui-org/react'
 
 
 
 const addManga = () => {
-   
+   const classes = `form-control`
+
+
  return (
-     <div className={styles.primary}>
+     <div className={styles.div}>
     <form className='row' onSubmit={() => {
         store.dispatch(saveManga())
     }}>
@@ -31,7 +32,7 @@ const addManga = () => {
         </div>
         <div className='row'>
         <div className='col-lg-2 form-floating'>
-            <input className='form-control' id="Manganame" placeholder='Name' onChange={(e) => {
+            <input className={ `form-control ${styles.mangaName}`} id="Manganame" placeholder='Name' onChange={(e) => {
                 store.dispatch(addName(e.target.value))
                 store.dispatch(getCurrentManga());
 
