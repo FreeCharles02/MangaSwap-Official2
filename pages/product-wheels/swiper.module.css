@@ -1,0 +1,19 @@
+.swiperslide img {
+    width: 200px;
+    height: 300px;
+    border: 10px solid white;
+}
+
+
+.swiperslide img:hover {
+    width: 225px;
+    height: 325px;
+    transition: width 0.5s, height 0.5s;
+    border-color: aqua;
+}
+
+.swiper {
+.swiper-free-mode > .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+}

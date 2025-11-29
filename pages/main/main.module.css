@@ -1,0 +1,11 @@
+.swiperHeader h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.swiperHeader h4 :hover {
+    color: aqua !important;
+    transition: color 0.3s;
+
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles  from './addManga.module.css'
 import { Dispatch } from 'redux'
-import { store } from '../store'
+import { store as mangaStore } from '../store'
 import { addCondition, addDesc, addName, addPrice, saveManga, getCurrentManga, addImage } from '../manga/mangaSlice'
 
 
@@ -12,8 +12,9 @@ const addManga = () => {
 
  return (
      <div className={styles.div}>
-    <form className='row' onSubmit={() => {
-        store.dispatch(saveManga())
+    <form className='row' onSubmit={(e) => {
+        e.preventDefault()
+        mangaStore.dispatch(saveManga())
     }}>
             <div className='col-lg-12'>
         <div className='row mangaForm'>
@@ -23,18 +24,18 @@ const addManga = () => {
             const reader = new FileReader();
             reader.onload = () => {
                 const filebase: string = reader.result as string
-                store.dispatch(addImage(filebase));
+                mangaStore.dispatch(addImage(filebase));
             }
             reader.readAsDataURL(files);
-            store.dispatch(getCurrentManga())
+            mangaStore.dispatch(getCurrentManga())
         }}/>
         </div>
         </div>
         <div className='row'>
         <div className='col-lg-2 form-floating'>
             <input className={ `form-control ${styles.mangaName}`} id="Manganame" placeholder='Name' onChange={(e) => {
-                store.dispatch(addName(e.target.value))
-                store.dispatch(getCurrentManga());
+                mangaStore.dispatch(addName(e.target.value))
+                mangaStore.dispatch(getCurrentManga());
 
             }}/>
             <label htmlFor='Manganame'>Name</label> 
@@ -44,8 +45,8 @@ const addManga = () => {
         <div className='col-lg-2 form-floating'>
            
             <select className='form-select' id="condition" onChange={(e) => {
-                store.dispatch(addCondition(e.target.value))
-                store.dispatch(getCurrentManga())
+                mangaStore.dispatch(addCondition(e.target.value))
+                mangaStore.dispatch(getCurrentManga())
             }}>
                 <option>--Select--</option> 
                 <option value="Mint">Mint</option>
@@ -59,8 +60,8 @@ const addManga = () => {
         <div className='row'>
         <div className='col-lg-2 form-floating'>
             <textarea className='form-control' id='managdesc' onChange={(e) => {
-                store.dispatch(addDesc(e.target.value))
-                store.dispatch(getCurrentManga());
+                mangaStore.dispatch(addDesc(e.target.value))
+                mangaStore.dispatch(getCurrentManga());
             }} /> 
             <label htmlFor='mangadesc'>
                 Description...
@@ -73,8 +74,8 @@ const addManga = () => {
             $
         </span>
         <input type="number" step="0.01" className='form-controqdl-sm' id="$" onChange={(e) => {
-            store.dispatch(addPrice(e.target.value))
-            store.dispatch(getCurrentManga())
+            mangaStore.dispatch(addPrice(e.target.value))
+            mangaStore.dispatch(getCurrentManga())
         }}/>
         </div>
         </div>

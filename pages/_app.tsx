@@ -11,7 +11,12 @@ export default function App({
   Component, pageProps:
   { session, ...pageProps},
  }: AppProps) {
-
+ useEffect(() => {
+   // Test the database connection on app load
+       axios.get('/api/route');  
+    }, []);
+  
+  
   return (
     <Provider store={store}>
     <SessionProvider session={session}>

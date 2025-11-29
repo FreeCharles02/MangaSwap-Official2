@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { Double } from 'mongodb'
 import { RootState } from '../store'
-import { Image } from 'react-native'
 import axios from 'axios'
 
 export interface MangaState {
@@ -21,9 +20,10 @@ const initialState: MangaState = {
     image: null
 }
 
-export const saveManga = createAsyncThunk('manga/saveManga', async (dispatch, getState) => {
-    const savedManga = getState
-    axios.post('api/managa', savedManga)
+export const saveManga = createAsyncThunk('manga/saveManga', async (_, { getState }) => {
+    const state = getState() as RootState;
+    const savedManga = state.manga;
+    await axios.post('http://localhost:3000/api/manga', savedManga)
     .then((response) => {
         console.log(response.data)
     })
@@ -48,7 +48,7 @@ export const mangaSlice = createSlice({
        },
        getCurrentManga: (state) => {
          const savedManga = {...state}
-         console.log(savedManga);       
+         console.log("Current Manga: " + (savedManga))
        },
        addImage: (state, action: PayloadAction<string>) => {
             state.image = action.payload
@@ -57,8 +57,11 @@ export const mangaSlice = createSlice({
 })
 
 
-const getManga = createAsyncThunk('manga/getManga', async () => {
-    
+export const setManga = createAsyncThunk('manga/getManga', async (foundManga: MangaState) => {
+    addName(foundManga.Name)
+    addPrice(foundManga.price)
+    addDesc(foundManga.desc)
+    addImage(foundManga.image)
 })
 
 export const {addName, addCondition, addDesc, addPrice, getCurrentManga, addImage } = mangaSlice.actions

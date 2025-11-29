@@ -1,19 +1,20 @@
 'use client';
 
-import React from "react";
+import React, { use } from "react";
 import Link from "next/link";
 import Swiper2 from '../product-wheels/featuredslider'
 import NewSwiper from "../product-wheels/newswiper";
 import BarSwiper from "../product-wheels/bargainswiper";
 import { Spacer } from '@nextui-org/react';
+import styles from "./main.module.css";
 
 
 
    const Home = () => {
-    
+   
     
         return(
-            <div className="home">
+            <div className={styles.swiperHeader}>
                 <Spacer y={2} />
             <h4> 
                 <Link href="../product-pages/featured" style={{color: "black"}}>
@@ -24,7 +25,7 @@ import { Spacer } from '@nextui-org/react';
             <div className="Swiper">
                 <Swiper2 /> 
                 <Spacer y={4} />
-                <div className="NewSwiper">
+                <div className={styles.swiperHeader}>
                     <h4>
                         <Link href="../product-pages/newproductpage" style={{color: "black"}}>
                         New!
@@ -32,7 +33,7 @@ import { Spacer } from '@nextui-org/react';
                         <Spacer y={2} />
                     </h4>
                     <NewSwiper />
-                    <div className="onSale">
+                    <div className={styles.swiperHeader}>
                         <Spacer y={4} />
                         <h4>
                             <Link href="../product-pages/bargainproducts" style={{color: "black"}}>
