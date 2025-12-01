@@ -12,13 +12,12 @@ import 'swiper/css/scrollbar';
 
 const NewSwiper = () => {
     return (
-
-            <Swiper className={styles.swiper}
+            <Swiper
                  modules={[Navigation, Pagination, A11y, FreeMode, Autoplay]}
                  spaceBetween={0}
                  slidesPerView={6}
-                 navigation
-                 pagination={{clickable: true }}
+             //    navigation
+             //    pagination={{clickable: true }}
                  scrollbar={{ draggable: true }}
                  onSlideChange={() => console.log('slide change')}
                  onSwiper={(swiper) => console.log(swiper)}

@@ -116,3 +116,7 @@
 .topnav title {
     text-decoration: none;
 }
+
+.swiper-wrapper {
+    transition-timing-function: linear !important;
+}

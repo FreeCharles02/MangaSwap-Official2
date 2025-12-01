@@ -1,6 +1,6 @@
 import React from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {FreeMode} from "swiper";
+import {Autoplay, FreeMode} from "swiper";
 import { Navigation, Pagination, A11y} from 'swiper';
 import Link from 'next/link';
 import styles from './swiper.module.css'
@@ -13,18 +13,18 @@ const BarSwiper = () => {
     return (
          <div className={styles.primary}>
             <Swiper 
-                 modules={[Navigation, Pagination, A11y, FreeMode]}
-                 spaceBetween={-600}
-                 slidesPerView={4}
+                 modules={[Navigation, Pagination, A11y, FreeMode, Autoplay]}
+                 spaceBetween={0}
+                 slidesPerView={6}
                  navigation
                  pagination={{clickable: true }}
                  scrollbar={{ draggable: true }}
                  onSlideChange={() => console.log('slide change')}
                  onSwiper={(swiper) => console.log(swiper)}
-                 autoplay={{delay: 0}}
+                 autoplay={{delay: 0, reverseDirection: true}}
                  loop={true}
                  freeMode={true}
-                 speed={4000}
+                 speed={10000}
                  >
                    
                      <SwiperSlide className={styles.swiperslide}> 
@@ -52,6 +52,36 @@ const BarSwiper = () => {
                      <SwiperSlide className={styles.swiperslide}> 
                         <Link href='../product-pages/productlisting'> 
                      <img src='https://i.imgur.com/y2nckFd.jpg' href='#' alt=''/> 
+                     </Link> 
+                     </SwiperSlide>
+                     <SwiperSlide className={styles.swiperslide}> 
+                        <Link href='../product-pages/productlisting'> 
+                     <img src='https://i.imgur.com/l1V9Xah.jpg' alt=''/> 
+                     </Link> 
+                     </SwiperSlide>
+                     <SwiperSlide className={styles.swiperslide}> 
+                        <Link href='../product-pages/productlisting'> 
+                     <img src='https://i.imgur.com/l1V9Xah.jpg' alt=''/> 
+                     </Link> 
+                     </SwiperSlide>
+                     <SwiperSlide className={styles.swiperslide}> 
+                        <Link href='../product-pages/productlisting'> 
+                     <img src='https://i.imgur.com/l1V9Xah.jpg' alt=''/> 
+                     </Link> 
+                     </SwiperSlide>
+                     <SwiperSlide className={styles.swiperslide}> 
+                        <Link href='../product-pages/productlisting'> 
+                     <img src='https://i.imgur.com/l1V9Xah.jpg' alt=''/> 
+                     </Link> 
+                     </SwiperSlide>
+                     <SwiperSlide className={styles.swiperslide}> 
+                        <Link href='../product-pages/productlisting'> 
+                     <img src='https://i.imgur.com/l1V9Xah.jpg' alt=''/> 
+                     </Link> 
+                     </SwiperSlide>
+                     <SwiperSlide className={styles.swiperslide}> 
+                        <Link href='../product-pages/productlisting'> 
+                     <img src='https://i.imgur.com/l1V9Xah.jpg' alt=''/> 
                      </Link> 
                      </SwiperSlide>
                      <SwiperSlide className={styles.swiperslide}> 

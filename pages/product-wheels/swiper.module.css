@@ -1,8 +1,10 @@
 .swiperslide img {
     width: 200px;
     height: 300px;
-    border: 10px solid white;
+    border: 5px solid lightgrey;
+    transition-timing-function: linear;
 }
+
 
 
 .swiperslide img:hover {
@@ -12,8 +14,3 @@
     border-color: aqua;
 }
 
-.swiper {
-.swiper-free-mode > .swiper-wrapper {
-    transition-timing-function: linear !important;
-}
-}

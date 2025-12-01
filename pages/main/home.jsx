@@ -33,7 +33,7 @@ import styles from "./main.module.css";
                         <Spacer y={2} />
                     </h4>
                     <NewSwiper />
-                    <div className={styles.swiperHeader}>
+                   { /* <div className={styles.swiperHeader}>
                         <Spacer y={4} />
                         <h4>
                             <Link href="../product-pages/bargainproducts" style={{color: "black"}}>
@@ -42,7 +42,7 @@ import styles from "./main.module.css";
                             <Spacer y={2} />
                         </h4>
                         <BarSwiper />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
