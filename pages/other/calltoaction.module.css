@@ -1,0 +1,16 @@
+.callToAction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.subscribeButton {
+    width: 100%;
+   background-color: lightblue;
+}
+
+.subscribeButton:hover {
+    background-color: teal !important;
+}

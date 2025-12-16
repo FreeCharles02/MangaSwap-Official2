@@ -1,0 +1,46 @@
+.topBanner {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.topImage {
+    display: flex;
+    background-image:url("/MangaImages/narutobannerbetter.jpg");
+    background-size: 400px 150px;
+    width: 130%;
+    height: 30%;
+    background-repeat: no-repeat;
+}
+
+.secondImage { 
+    background-image: url("/MangaImages/bluelock.jpg");
+    background-size: 400px 175px;
+    width: 127%;
+    height: 35%;
+    background-repeat: no-repeat;
+}
+
+.thirdImage {
+   background-image: url("/MangaImages/blackclover.jpg");
+   background-size: 400px 170px;
+   width: 100%;
+   height:105%;
+   background-repeat: no-repeat;
+}
+
+.backgroundsideImages {
+    display: flex;
+    background: rgba(239, 134, 63, 0.7);
+    height: 40%;
+    width: 30%;
+    align-self: end;
+    align-items: end;
+}
+
+.backgroundsideImages a {
+    color: white;
+    text-decoration: wavy !important;
+    opacity: none;
+    font-size: 30px
+}

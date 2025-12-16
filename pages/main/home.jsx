@@ -7,13 +7,14 @@ import NewSwiper from "../product-wheels/newswiper";
 import BarSwiper from "../product-wheels/bargainswiper";
 import { Spacer } from '@nextui-org/react';
 import styles from "./main.module.css";
-
+import TopBanner from "../other/TopBanner";
+import CallToAction from "../other/CallToAction";
 
 
    const Home = () => {
-   
-    
         return(
+            <>
+            <TopBanner />
             <div className={styles.swiperHeader}>
                 <Spacer y={2} />
             <h4> 
@@ -33,20 +34,13 @@ import styles from "./main.module.css";
                         <Spacer y={2} />
                     </h4>
                     <NewSwiper />
-                   { /* <div className={styles.swiperHeader}>
-                        <Spacer y={4} />
-                        <h4>
-                            <Link href="../product-pages/bargainproducts" style={{color: "black"}}>
-                            Sale!
-                            </Link>
-                            <Spacer y={2} />
-                        </h4>
-                        <BarSwiper />
-                    </div> */}
-                </div>
             </div>
         </div>
+        </div>
+        <CallToAction />
+        </>
         );
+        
     }
 
  

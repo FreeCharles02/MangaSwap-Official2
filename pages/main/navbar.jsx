@@ -3,8 +3,6 @@ import Link from "next/link";
 import useMangaSearch from '../useMangaSearch'
 
 const Navbar = () => {
- 
-
   return (  
 <>   
   <div className="topnav">
