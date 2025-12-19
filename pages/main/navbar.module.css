@@ -1,0 +1,26 @@
+.navbarList {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.navbarList li a {
+    text-decoration-style: wavy !important;
+    text-decoration-color: black;
+    color: grey;
+   /* color: rgba(239, 134, 63, 1.0); */
+}
+
+.navbarList li a:hover {
+ color: rgba(239, 134, 63, 1.0);
+  transition: color 0.5s;
+}
+
+.navbarTitle {
+    text-decoration: none;
+    color: rgba(239, 134, 63, 1.0);
+}
+
+.navBar {
+    border-bottom: 5px solid rgba(239, 134, 63, 1.0);
+}

@@ -1,5 +1,5 @@
 .topBanner {
-    border-bottom: 1px solid black;
+    border-bottom: 5px solid rgba(239, 134, 63, 1.0);
     display: flex;
     justify-content: center;
 }

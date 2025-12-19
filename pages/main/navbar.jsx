@@ -1,36 +1,56 @@
 import React, { useState, useRef, useCallback } from "react"
 import Link from "next/link";
 import useMangaSearch from '../useMangaSearch'
+import localFont from 'next/font/local'
+import styles from './navbar.module.css'
 
 const Navbar = () => {
   return (  
 <>   
-  <div className="topnav">
-    
-      <Link href='/'>
-      <h1 className="title">
+  <div className={styles.navBar}>
+    <div className="row">
+      <Link className={styles.navbarTitle} href='/'>
+      <h1>
       MangaSwap
       </h1>
       </Link>
       
       
       
-      
-      <ul className="row d-flex">
+      <div className={`row ${styles.navbarLinks}`}>
+      <div className={`col-lg-3`}>
+      <ul className={styles.navbarList}>
         <li>
-       <Link href='../user-pages/community' className="ul">Community</Link>
-       </li>
-       <li>
-       <Link href='../user-pages/profile' className="ul">Profile</Link>
-       </li>
-       <li>
-       <Link href='../user-pages/cart'className="ul">Cart</Link>
-       </li>
-       <Link href='../user-pages/addManga'>
-        Add Manga 
+       <Link href='../user-pages/community'>
+       <p>
+       Community
+       </p>
        </Link>
+       </li>
+       <li>
+       <Link href='../user-pages/profile'>
+       <p>
+       Profile
+       </p>
+       </Link>
+       </li>
+       <li>
+       <Link href='../user-pages/cart'>
+       <p>
+       Cart
+       </p>
+       </Link>
+       </li>
+       <li>
+       <Link href='../user-pages/addManga'>
+       <p>
+        Add Manga 
+        </p>
+       </Link>
+       </li>
        </ul>
-      
+      </div>
+      </div>
       
       
     
@@ -38,6 +58,7 @@ const Navbar = () => {
      
       <Link href={ "../pages/main/searchpage.jsx"}><button className="search-btn" > Search</button></Link>
       
+      </div>
       </div>
       </>
     )

@@ -8,9 +8,11 @@
 
 .subscribeButton {
     width: 100%;
-   background-color: lightblue;
+   background-color:  rgba(239, 134, 63, 1.0);
+   color: white;
 }
 
 .subscribeButton:hover {
-    background-color: teal !important;
+    background-color: orange !important;
+    color: white;
 }
