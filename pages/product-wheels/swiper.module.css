@@ -11,6 +11,7 @@
     width: 225px;
     height: 325px;
     transition: width 0.5s, height 0.5s;
-    border-color: aqua;
+    border-color: rgba(239, 134, 63, 1.0);
 }
+
 

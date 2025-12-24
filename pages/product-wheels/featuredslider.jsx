@@ -14,7 +14,7 @@ import 'swiper/css/scrollbar';
   const Swiper2 = () => {
   
    return (
-    <div >
+    <div className={styles.primary}>
       <Swiper  
            modules={[Navigation, Pagination, A11y, FreeMode, Autoplay]}
            spaceBetween={0}

@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    border-top: 50px solid beige;
+    border-bottom: 40px solid beige;
+    background-color: beige
 }
 
 .subscribeButton {

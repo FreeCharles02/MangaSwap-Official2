@@ -45,6 +45,21 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: Bubble Sans;
+    src: url("/font folder/Bubble Sans 1.01.otf");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Otaku Rant;
+    src: url("/font folder/Otaku Rant.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 h1, h2, h3 {
     font-family: SugarBomb !important;
@@ -55,7 +70,7 @@ h4, h5, h6 {
 }
 
 p {
-    font-family: Yeyey;
+    font-family: Yeyey !important;
 }
 
 
@@ -155,4 +170,8 @@ p {
 
 .swiper-wrapper {
     transition-timing-function: linear !important;
+}
+
+:root {
+ --jaffa:  rgba(239, 134, 63, 1.0);
 }

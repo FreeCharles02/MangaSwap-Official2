@@ -7,7 +7,7 @@
 .navbarList li a {
     text-decoration-style: wavy !important;
     text-decoration-color: black;
-    color: grey;
+    color:  #353535;
    /* color: rgba(239, 134, 63, 1.0); */
 }
 
@@ -18,9 +18,12 @@
 
 .navbarTitle {
     text-decoration: none;
-    color: rgba(239, 134, 63, 1.0);
+    color:  rgba(239, 134, 63, 1.0);
+    -webkit-text-stroke: 1px white;
 }
 
 .navBar {
-    border-bottom: 5px solid rgba(239, 134, 63, 1.0);
+    border-bottom: 1px solid #8A9099;
+    background-color: #ededed;
+    margin-bottom: 4px;
 }
